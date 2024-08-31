@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import MedicineForm from "./src/components/MedicineForm";
 import MedicineList from "./src/components/MedicineList";
 import NavBar from "./src/components/NavBar";
+import './index.css';
 
 function App() {
   const [medicines, setMedicines] = useState([]);
