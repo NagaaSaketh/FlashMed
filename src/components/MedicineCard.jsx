@@ -8,20 +8,15 @@ function MedicineCard({ time, medicines }) {
   };
 
   return (
-    <div
-      className={`medicine-card ${flipped ? "flipped" : ""}`}
-      onClick={handleFlip}
-    >
-      <div className="card-inner">
-        <div className="card-front">
+    <div className="medicine-card-container" onClick={handleFlip}>
+      <div className={`medicine-card ${flipped ? "flipped" : ""}`}>
+        <div className="card-side card-front">
           <h3>{time}</h3>
         </div>
-        <div className="card-back">
-          <div>
-            {medicines.map((medicine, index) => (
-              <p className="medicine" key={index}>{medicine}</p>
-            ))}
-            </div>
+        <div className="card-side card-back">
+          {medicines.map((medicine, index) => (
+            <p key={index}>{medicine}</p>
+          ))}
         </div>
       </div>
     </div>
